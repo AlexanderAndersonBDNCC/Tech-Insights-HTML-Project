@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <!-- Site Header -->
+    <header>
+      <div class="logo">
+        <img
+          src="images/logo.svg"
+          width="200"
+          height="200"
+          alt="Tech Insights Logo"
+        />
+        <h1>Tech Insights</h1>
+        <p class="tagline">Your Source for Technology News and Reviews</p>
+      </div>
+
+      <nav aria-name="main-nav">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="comparison.html">Product Comparison</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Contact Us</h2>
+
+      <form action="submit-contact.php" method="post" name="contact-us">
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="name">Full Name <span id="required">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Firstname Lastname"
+            required
+            autocomplete="name"
+          />
+          <br /><br />
+
+          <label for="email">Email Address <span id="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+            autocomplete="email"
+          />
+          <br /><br />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Please use the requested format: 555-123-4567"
+            placeholder="555-123-4567"
+            autocomplete="tel"
+          />
+          <br />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Your Inquiry</legend>
+
+          <label for="subject">Subject <span id="required">*</span></label>
+          <br />
+          <select
+            id="subject"
+            name="subject"
+            required
+            aria-describedby="subject-help"
+          >
+            <option value="">&lt;-- Select and Option --&gt;</option>
+            <option value="question">General Question</option>
+            <option value="support">Technical Support</option>
+            <option value="review-request">Product Review Request</option>
+            <option value="partnership">Partnership Opportunity</option>
+          </select>
+          <p id="subject-help">
+            Please select the subject your message falls under.
+          </p>
+          <br />
+
+          <label for="message">Message <span id="required">*</span></label>
+          <br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="80"
+            placeholder="Enter your message here..."
+            required
+          ></textarea>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Communication Preferences</legend>
+
+          <label for="newsletter"
+            ><input
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
+              value="yes"
+              checked
+            /> Subscribe to our Newsletter!</label
+          >
+          <br /><br />
+          <label for="terms"
+            ><input type="radio" id="terms" name="terms" required /> I agree to
+            the Terms and Conditions <span id="required">*</span></label
+          >
+        </fieldset>
+        <br />
+        <button type="submit">Send Message</button>
+        <br />
+      </form>
+    </main>
+
+    <!-- Site Footer -->
+    <footer>
+      <hr />
+      <p class="copyright">&copy; 2024 Tech Insights. All rights reserved.</p>
+
+      <div class="socials">
+        <p>Follow us on our socials!</p>
+        <ul>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="#">LinkedIn</a>
+          </li>
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
